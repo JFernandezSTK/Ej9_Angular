@@ -1,0 +1,13 @@
+<h1>Formulario Reactivo</h1>
+<form #form="ngForm" [formGroup]="formulario" (submit)="cambio()">
+    <label>Id:</label><input type="number" formControlName="id" required>
+    <br>
+    <label>DNI:</label><input type="text" formControlName="dni" required>
+    <br>
+    <label>Nombre:</label><input type="text" formControlName="nombre" required>
+    <br>
+    <label>Horas:</label><input type="number" formControlName="horas" required>
+    <br>
+    <button type="submit" [disabled]="formulario.invalid">Enviar</button>
+    <button type="button"  routerLink='' routerLinkActive="active" ariaCurrentWhenActive="page">Cancelar</button>
+</form>
